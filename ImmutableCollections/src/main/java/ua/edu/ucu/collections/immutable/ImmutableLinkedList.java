@@ -16,11 +16,17 @@ public final class ImmutableLinkedList implements ImmutableList {
     private Node tail;
     private int size;
 
-    public Node getHead() { return head; }
+    public Node getHead() {
+        return head;
+    }
 
-    public Node getTail() { return tail; }
+    public Node getTail() {
+        return tail;
+    }
 
-    public int getSize() { return size; }
+    public int getSize() {
+        return size;
+    }
 
     public ImmutableLinkedList() {
         this.head = null;
@@ -29,14 +35,14 @@ public final class ImmutableLinkedList implements ImmutableList {
     }
 
     public ImmutableLinkedList(Object[] els) {
-        if(els == null){
+        if (els == null) {
             throw new IllegalArgumentException();
         }
-        if(els.length == 0){
+        if (els.length == 0) {
             this.head = null;
             this.tail = null;
             this.size = 0;
-        }else {
+        } else {
             this.head = new Node(els[0]);
             Node local = head;
             for (int i = 1; i < els.length; i++) {
@@ -58,8 +64,8 @@ public final class ImmutableLinkedList implements ImmutableList {
         Node newlocalNode = newImmLinkedList.head;
         for (int i = 1; i < size; i++) {
             newlocalNode.next = new Node(localNode.next.value);
-            newlocalNode  = newlocalNode.next;
-            localNode  = localNode.next;
+            newlocalNode = newlocalNode.next;
+            localNode = localNode.next;
         }
         newImmLinkedList.tail = newlocalNode;
         newImmLinkedList.size = size;
@@ -104,10 +110,12 @@ public final class ImmutableLinkedList implements ImmutableList {
         if (index == 0) {
             cImmLinkedList.tail.next = newImmLinkedList.head;
             newImmLinkedList.head = cImmLinkedList.head;
-            if(size == 0) newImmLinkedList.tail = cImmLinkedList.tail;
-        }else{
-            if (index > size) { throw new IllegalArgumentException(); }
-            previousElement = newImmLinkedList.getElementByIndex(index-1);
+            if (size == 0) newImmLinkedList.tail = cImmLinkedList.tail;
+        } else {
+            if (index > size) {
+                throw new IllegalArgumentException();
+            }
+            previousElement = newImmLinkedList.getElementByIndex(index - 1);
             cImmLinkedList.tail.next = previousElement.next;
             previousElement.next = cImmLinkedList.head;
             if (index == size) newImmLinkedList.tail = cImmLinkedList.tail;
@@ -124,7 +132,7 @@ public final class ImmutableLinkedList implements ImmutableList {
         if (size == 0) {
             throw new IllegalArgumentException();
         }
-        if(size == 1){
+        if (size == 1) {
             return new ImmutableLinkedList();
         }
 
@@ -132,12 +140,12 @@ public final class ImmutableLinkedList implements ImmutableList {
         Node previousElement;
         if (index == 0) {
             newImmLinkedList.head = newImmLinkedList.head.next;
-        }else{
-            previousElement = newImmLinkedList.getElementByIndex(index-1);
-            if(index == size - 1){
+        } else {
+            previousElement = newImmLinkedList.getElementByIndex(index - 1);
+            if (index == size - 1) {
                 previousElement.next = null;
                 newImmLinkedList.tail = previousElement;
-            }else {
+            } else {
                 previousElement.next = previousElement.next.next;
             }
         }
@@ -168,6 +176,7 @@ public final class ImmutableLinkedList implements ImmutableList {
     public int size() {
         return size;
     }
+
     public ImmutableLinkedList clear() {
         return new ImmutableLinkedList();
     }
@@ -198,8 +207,8 @@ public final class ImmutableLinkedList implements ImmutableList {
             localNode = localNode.next;
         }
         int len = sb.length();
-        if (len >= 1){
-            sb.delete(len-2, len);
+        if (len >= 1) {
+            sb.delete(len - 2, len);
         }
         return sb.toString();
     }
@@ -225,10 +234,12 @@ public final class ImmutableLinkedList implements ImmutableList {
         }
         return getTail().value;
     }
+
     public ImmutableLinkedList removeFirst() {
         return remove(0);
     }
+
     public ImmutableLinkedList removeLast() {
-        return remove(size-1);
+        return remove(size - 1);
     }
 }

@@ -1,6 +1,6 @@
 package ua.edu.ucu.collections.immutable;
 
-public final class ImmutableArrayList implements ImmutableList{
+public final class ImmutableArrayList implements ImmutableList {
     private int size;
     private int buf_size;
     private Object[] arr;
@@ -8,57 +8,67 @@ public final class ImmutableArrayList implements ImmutableList{
     public int getBufSize() {
         return buf_size;
     }
+
     private void Init(int buf_size) {
         this.size = 0;
         this.arr = new Object[buf_size];
         this.buf_size = buf_size;
     }
+
     public ImmutableArrayList(int buf_size) {
         this.Init(buf_size);
     }
+
     public ImmutableArrayList() {
         this.Init(0);
     }
+
     public ImmutableArrayList(Object[] els) {
         this.arr = els;
         this.size = els.length;
         this.buf_size = els.length;
     }
+
     private ImmutableArrayList createCopy(int addBufferSize) {
-        ImmutableArrayList newArr = new ImmutableArrayList(size+addBufferSize);
+        ImmutableArrayList newArr = new ImmutableArrayList(size + addBufferSize);
 
         for (int i = 0; i < size; i++) {
             newArr.arr[i] = this.arr[i];
         }
-        newArr.buf_size = this.size+addBufferSize;
+        newArr.buf_size = this.size + addBufferSize;
         newArr.size = this.size;
         return newArr;
     }
+
     private ImmutableArrayList createCopy() {
         return createCopy(0);
     }
+
     public ImmutableArrayList add(Object e) {
         ImmutableArrayList newArr = createCopy(1);
         newArr.arr[newArr.size] = e;
         newArr.size += 1;
         return newArr;
     }
+
     public ImmutableArrayList add(int index, Object e) {
         return addAll(index, new Object[]{e});
     }
+
     public ImmutableArrayList addAll(Object[] c) {
         int n = c.length;
         ImmutableArrayList newArr = createCopy(n);
         for (int i = 0; i < n; i++) {
-            newArr.arr[this.size+i] = c[i];
+            newArr.arr[this.size + i] = c[i];
         }
         newArr.size += n;
         return newArr;
     }
+
     public ImmutableArrayList addAll(int index, Object[] c) {
         int n = c.length;
         ImmutableArrayList newArr = createCopy(n);
-        if (size!=0) {
+        if (size != 0) {
             if (index >= size || index < 0) {
                 throw new IllegalArgumentException();
             }
@@ -79,20 +89,22 @@ public final class ImmutableArrayList implements ImmutableList{
         }
         return arr[index];
     }
+
     public ImmutableArrayList remove(int index) {
         if (index >= size || index < 0) {
             throw new IllegalArgumentException();
         }
-        ImmutableArrayList newArr = new ImmutableArrayList(size-1);
+        ImmutableArrayList newArr = new ImmutableArrayList(size - 1);
         for (int i = 0; i < index; i++) {
             newArr.arr[i] = arr[i];
         }
-        for (int i = index; i < size-1; i++) {
-            newArr.arr[i] = arr[i+1];
+        for (int i = index; i < size - 1; i++) {
+            newArr.arr[i] = arr[i + 1];
         }
         newArr.size = this.size - 1;
         return newArr;
     }
+
     public ImmutableArrayList set(int index, Object e) {
         if (index >= size || index < 0) {
             throw new IllegalArgumentException();
@@ -101,6 +113,7 @@ public final class ImmutableArrayList implements ImmutableList{
         newArr.arr[index] = e;
         return newArr;
     }
+
     public int indexOf(Object e) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == e) {
@@ -109,18 +122,23 @@ public final class ImmutableArrayList implements ImmutableList{
         }
         return -1;
     }
+
     public int size() {
         return size;
     }
+
     public ImmutableArrayList clear() {
         return new ImmutableArrayList();
     }
+
     public boolean isEmpty() {
         return size == 0;
     }
+
     public Object[] toArray() {
         return arr;
     }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -129,8 +147,8 @@ public final class ImmutableArrayList implements ImmutableList{
             sb.append(", ");
         }
         int len = sb.length();
-        if (len >= 1){
-            sb.delete(len-2, len);
+        if (len >= 1) {
+            sb.delete(len - 2, len);
         }
         return sb.toString();
     }

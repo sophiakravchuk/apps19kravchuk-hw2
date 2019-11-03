@@ -24,6 +24,7 @@ public class ImmutableArrayListTest {
         assertEquals(0, newArrayList1.size());
         assertArrayEquals(newObj, newArrayList1.toArray());
     }
+
     @Test
     public void testImmutableArrayListWithEls() {
         String[] newIntLst = {"1", "2", "3"};
@@ -31,6 +32,7 @@ public class ImmutableArrayListTest {
         assertEquals(3, newArrayList2.size());
         assertArrayEquals(newIntLst, newArrayList2.toArray());
     }
+
     @Test
     public void testImmutableArrayListEmpty() {
         Object[] newObj = new Object[10];
@@ -38,6 +40,7 @@ public class ImmutableArrayListTest {
         assertEquals(0, newArrayList3.size());
         assertArrayEquals(newObj, newArrayList3.toArray());
     }
+
     @Test
     public void testAddatLastPosition() {
         String[] newArrLst1 = {"1"};
@@ -66,7 +69,7 @@ public class ImmutableArrayListTest {
         String[] newArrLst3 = {"1"};
         ImmutableArrayList newAL3 = newArrayList1.add(0, "1");
         assertArrayEquals(newArrLst3, newAL3.toArray());
-}
+    }
 
     @Test
     public void testAddatAnyPosition() {
@@ -102,16 +105,19 @@ public class ImmutableArrayListTest {
         assertArrayEquals(newatAnyPos2, newALAny2.toArray());
         assertArrayEquals(newatLastPos2, newALFirst2.toArray());
         assertArrayEquals(newatAnyPos3, newALAny3.toArray());
-        }
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void testAddAllInvalidIndextooBig() {
         String[] toAdd = {"a", "b", "c"};
         newArrayList2.addAll(5, toAdd);
     }
+
     @Test
     public void testGet() {
         assertEquals("1", newArrayList2.get(0));
     }
+
     @Test(expected = IllegalArgumentException.class)
     public void testGetInvalidIndextooBig() {
         Object a = newArrayList2.get(5);
@@ -126,13 +132,15 @@ public class ImmutableArrayListTest {
         assertArrayEquals(newatFirstPos, newArrayList2.remove(0).toArray());
         assertArrayEquals(newatAnyPos, newArrayList2.remove(1).toArray());
         assertArrayEquals(newatLastPos,
-                newArrayList2.remove(newArrayList2.size()-1).toArray());
+                newArrayList2.remove(newArrayList2.size() - 1).toArray());
 
     }
+
     @Test(expected = IllegalArgumentException.class)
     public void testRemoveInvalidIndex() {
         newArrayList2.remove(6);
     }
+
     @Test(expected = IllegalArgumentException.class)
     public void testRemoveInvalidIndex2() {
         newArrayList2.remove(-6);
@@ -146,31 +154,37 @@ public class ImmutableArrayListTest {
         assertArrayEquals(newatFirstPos, newArrayList2.set(0, "s").toArray());
         assertArrayEquals(newatAnyPos, newArrayList2.set(1, "s").toArray());
     }
+
     @Test(expected = IllegalArgumentException.class)
     public void testSetInvalidIndex() {
         newArrayList2.set(6, "s");
     }
+
     @Test
     public void testindexOf() {
         assertEquals(0, newArrayList2.indexOf("1"));
         assertEquals(-1, newArrayList2.indexOf("s"));
     }
+
     @Test
     public void testSize() {
         assertEquals(3, newArrayList2.size());
         assertEquals(0, newArrayList1.size());
     }
+
     @Test
     public void testClear() {
         ImmutableArrayList cleared = newArrayList2.clear();
         assertArrayEquals(newArrayList1.toArray(), cleared.toArray());
         assertEquals(0, cleared.size());
     }
+
     @Test
     public void testIsEmpty() {
         assertTrue(newArrayList1.isEmpty());
         assertFalse(newArrayList2.isEmpty());
     }
+
     @Test
     public void testToSyring() {
         String newArr = "1, 2, 3";

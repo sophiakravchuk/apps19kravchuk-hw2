@@ -14,12 +14,13 @@ public class QueueTest {
         newQueue1 = new Queue(newLst);
         newQueue2 = new Queue();
     }
-    
+
     @Test
     public void testPeek() {
         assertEquals("1", newQueue1.peek());
         assertNull(newQueue2.peek());
     }
+
     @Test
     public void testDequeue() {
         String[] newLst = {"2", "3"};
@@ -27,6 +28,7 @@ public class QueueTest {
         assertEquals("1", newQueue1.dequeue());
         assertEquals(newQueue3.toString(), newQueue1.toString());
     }
+
     @Test
     public void testEnqueue() {
         String[] newLst = {"1", "2", "3", "4"};
@@ -34,5 +36,5 @@ public class QueueTest {
         newQueue1.enqueue("4");
         assertEquals(newQueue4.toString(), newQueue1.toString());
     }
-    
+
 }

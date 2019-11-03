@@ -20,6 +20,7 @@ public class StackTest {
         assertEquals("3", newStack1.peek());
         assertNull(newStack2.peek());
     }
+
     @Test
     public void testDequeue() {
         String[] newLst = {"1", "2"};
@@ -27,6 +28,7 @@ public class StackTest {
         assertEquals("3", newStack1.pop());
         assertEquals(newQueue3.toString(), newStack1.toString());
     }
+
     @Test
     public void testEnqueue() {
         String[] newLst = {"1", "2", "3", "4"};
