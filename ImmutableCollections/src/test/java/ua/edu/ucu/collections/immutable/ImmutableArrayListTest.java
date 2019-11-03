@@ -20,21 +20,21 @@ public class ImmutableArrayListTest {
     @Test
     public void testImmutableArrayListBufSize() {
         Object[] newObj = new Object[0];
-        assertEquals(0, newArrayList1.getBuf_size());
+        assertEquals(0, newArrayList1.getBufSize());
         assertEquals(0, newArrayList1.size());
         assertArrayEquals(newObj, newArrayList1.toArray());
     }
     @Test
     public void testImmutableArrayListWithEls() {
         String[] newIntLst = {"1", "2", "3"};
-        assertEquals(3, newArrayList2.getBuf_size());
+        assertEquals(3, newArrayList2.getBufSize());
         assertEquals(3, newArrayList2.size());
         assertArrayEquals(newIntLst, newArrayList2.toArray());
     }
     @Test
     public void testImmutableArrayListEmpty() {
         Object[] newObj = new Object[10];
-        assertEquals(10, newArrayList3.getBuf_size());
+        assertEquals(10, newArrayList3.getBufSize());
         assertEquals(0, newArrayList3.size());
         assertArrayEquals(newObj, newArrayList3.toArray());
     }

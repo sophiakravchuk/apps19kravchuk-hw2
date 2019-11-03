@@ -2,10 +2,10 @@ package ua.edu.ucu.collections.immutable;
 
 class Node {
     Node next;
-    Object node;
+    Object value;
 
     Node(Object e) {
-        this.node = e;
+        this.value = e;
         this.next = null;
     }
 }
@@ -16,17 +16,11 @@ public final class ImmutableLinkedList implements ImmutableList {
     private Node tail;
     private int size;
 
-    public Node getHead() {
-        return head;
-    }
+    public Node getHead() { return head; }
 
-    public Node getTail() {
-        return tail;
-    }
+    public Node getTail() { return tail; }
 
-    public int getSize() {
-        return size;
-    }
+    public int getSize() { return size; }
 
     public ImmutableLinkedList() {
         this.head = null;
@@ -35,14 +29,23 @@ public final class ImmutableLinkedList implements ImmutableList {
     }
 
     public ImmutableLinkedList(Object[] els) {
-        this.head = new Node(els[0]);
-        Node local = head;
-        for (int i = 1; i < els.length; i++) {
-            local.next = new Node(els[i]);
-            local = local.next;
+        if(els == null){
+            throw new IllegalArgumentException();
         }
-        this.size = els.length;
-        this.tail = local;
+        if(els.length == 0){
+            this.head = null;
+            this.tail = null;
+            this.size = 0;
+        }else {
+            this.head = new Node(els[0]);
+            Node local = head;
+            for (int i = 1; i < els.length; i++) {
+                local.next = new Node(els[i]);
+                local = local.next;
+            }
+            this.size = els.length;
+            this.tail = local;
+        }
     }
 
     private ImmutableLinkedList createCopy() {
@@ -50,22 +53,20 @@ public final class ImmutableLinkedList implements ImmutableList {
         if (size == 0) {
             return newImmLinkedList;
         }
-        newImmLinkedList.head = new Node(this.head.node);
+        newImmLinkedList.head = new Node(this.head.value);
         Node localNode = this.head;
         Node newlocalNode = newImmLinkedList.head;
         for (int i = 1; i < size; i++) {
-            newlocalNode.next = new Node(localNode.next.node);
+            newlocalNode.next = new Node(localNode.next.value);
             newlocalNode  = newlocalNode.next;
             localNode  = localNode.next;
-            if (i == size-1) {
-                newImmLinkedList.tail = newlocalNode;
-            }
         }
-        newImmLinkedList.size++;
+        newImmLinkedList.tail = newlocalNode;
+        newImmLinkedList.size = size;
         return newImmLinkedList;
     }
 
-    private Node getElementByInd(int index) {
+    private Node getElementByIndex(int index) {
         if (index < 0) {
             throw new IllegalArgumentException();
         }
@@ -82,82 +83,63 @@ public final class ImmutableLinkedList implements ImmutableList {
     }
 
     public ImmutableLinkedList add(Object e) {
-        ImmutableLinkedList newImmLinkedList = createCopy();
-        Node eNode = new Node(e);
-        if (newImmLinkedList.size == 0) {
-            newImmLinkedList.head = eNode;
-            newImmLinkedList.tail = eNode;
-        }else {
-            newImmLinkedList.tail.next = eNode;
-            newImmLinkedList.tail = eNode;
-        }
-        newImmLinkedList.size = this.size + 1;
-        return newImmLinkedList;
+        return addAll(size, new Object[]{e});
     }
 
     public ImmutableLinkedList add(int index, Object e) {
-        ImmutableLinkedList newImmLinkedList = createCopy();
-        Node previousElement;
-        Node newElement = new Node(e);
-        if (index == 0) {
-            newElement.next = newImmLinkedList.head;
-            newImmLinkedList.head = newElement;
-        }else {
-            previousElement = newImmLinkedList.getElementByInd(index-1);
-            newElement.next = previousElement.next;
-            previousElement.next = newElement;
-        }
-        newImmLinkedList.size = this.size + 1;
-        return newImmLinkedList;
+        return addAll(index, new Object[]{e});
     }
 
     public ImmutableLinkedList addAll(Object[] c) {
-        ImmutableLinkedList newImmLinkedList = createCopy();
-        ImmutableLinkedList cImmLinkedList = new ImmutableLinkedList(c);
-        if (newImmLinkedList.size == 0) {
-            newImmLinkedList.head = cImmLinkedList.head;
-            newImmLinkedList.tail = cImmLinkedList.tail;
-        }else{
-            newImmLinkedList.tail.next = cImmLinkedList.head;
-            newImmLinkedList.tail = cImmLinkedList.tail;
-        }
-        newImmLinkedList.size += cImmLinkedList.size;
-        return newImmLinkedList;
+        return addAll(size, c);
     }
 
     public ImmutableLinkedList addAll(int index, Object[] c) {
+        if (index > size) {
+            throw new IllegalArgumentException();
+        }
         ImmutableLinkedList newImmLinkedList = createCopy();
         ImmutableLinkedList cImmLinkedList = new ImmutableLinkedList(c);
         Node previousElement;
         if (index == 0) {
             cImmLinkedList.tail.next = newImmLinkedList.head;
             newImmLinkedList.head = cImmLinkedList.head;
+            if(size == 0) newImmLinkedList.tail = cImmLinkedList.tail;
         }else{
-            if (index >= size) {
-                throw new IllegalArgumentException(); }
-            previousElement = newImmLinkedList.getElementByInd(index-1);
+            if (index > size) { throw new IllegalArgumentException(); }
+            previousElement = newImmLinkedList.getElementByIndex(index-1);
             cImmLinkedList.tail.next = previousElement.next;
             previousElement.next = cImmLinkedList.head;
+            if (index == size) newImmLinkedList.tail = cImmLinkedList.tail;
         }
         newImmLinkedList.size += cImmLinkedList.size;
         return newImmLinkedList;
     }
 
     public Object get(int index) {
-        return getElementByInd(index).node;
+        return getElementByIndex(index).value;
     }
 
     public ImmutableLinkedList remove(int index) {
         if (size == 0) {
             throw new IllegalArgumentException();
         }
+        if(size == 1){
+            return new ImmutableLinkedList();
+        }
+
         ImmutableLinkedList newImmLinkedList = createCopy();
         Node previousElement;
         if (index == 0) {
             newImmLinkedList.head = newImmLinkedList.head.next;
         }else{
-            previousElement = newImmLinkedList.getElementByInd(index-1);
-            previousElement.next = previousElement.next.next;
+            previousElement = newImmLinkedList.getElementByIndex(index-1);
+            if(index == size - 1){
+                previousElement.next = null;
+                newImmLinkedList.tail = previousElement;
+            }else {
+                previousElement.next = previousElement.next.next;
+            }
         }
         newImmLinkedList.size = this.size - 1;
         return newImmLinkedList;
@@ -165,15 +147,15 @@ public final class ImmutableLinkedList implements ImmutableList {
 
     public ImmutableLinkedList set(int index, Object e) {
         ImmutableLinkedList newImmLinkedList = createCopy();
-        Node elementToChange = newImmLinkedList.getElementByInd(index);
-        elementToChange.node = e;
+        Node elementToChange = newImmLinkedList.getElementByIndex(index);
+        elementToChange.value = e;
         return newImmLinkedList;
     }
 
     public int indexOf(Object e) {
         int resIndex = 0;
         Node localNode = head;
-        while (localNode.node != e) {
+        while (localNode.value != e) {
             resIndex++;
             localNode = localNode.next;
             if (localNode == null) {
@@ -187,11 +169,7 @@ public final class ImmutableLinkedList implements ImmutableList {
         return size;
     }
     public ImmutableLinkedList clear() {
-        ImmutableLinkedList newImmLinkedList = createCopy();
-        newImmLinkedList.head = null;
-        newImmLinkedList.tail = null;
-        newImmLinkedList.size = 0;
-        return newImmLinkedList;
+        return new ImmutableLinkedList();
     }
 
     public boolean isEmpty() {
@@ -203,7 +181,7 @@ public final class ImmutableLinkedList implements ImmutableList {
         Node localNode = head;
         int ind = 0;
         while (localNode != null) {
-            arr[ind] = localNode.node;
+            arr[ind] = localNode.value;
             localNode = localNode.next;
             ind += 1;
         }
@@ -215,7 +193,7 @@ public final class ImmutableLinkedList implements ImmutableList {
         StringBuilder sb = new StringBuilder();
         Node localNode = head;
         while (localNode != null) {
-            sb.append(localNode.node.toString());
+            sb.append(localNode.value.toString());
             sb.append(", ");
             localNode = localNode.next;
         }
@@ -238,14 +216,14 @@ public final class ImmutableLinkedList implements ImmutableList {
         if (head == null) {
             return null;
         }
-        return getHead().node;
+        return getHead().value;
     }
 
     public Object getLast() {
         if (tail == null) {
             return null;
         }
-        return getTail().node;
+        return getTail().value;
     }
     public ImmutableLinkedList removeFirst() {
         return remove(0);

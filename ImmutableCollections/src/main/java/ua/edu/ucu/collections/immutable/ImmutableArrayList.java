@@ -5,19 +5,19 @@ public final class ImmutableArrayList implements ImmutableList{
     private int buf_size;
     private Object[] arr;
 
-    public int getBuf_size() {
+    public int getBufSize() {
         return buf_size;
     }
-
-    public ImmutableArrayList(int buf_size) {
+    private void Init(int buf_size) {
         this.size = 0;
         this.arr = new Object[buf_size];
         this.buf_size = buf_size;
     }
+    public ImmutableArrayList(int buf_size) {
+        this.Init(buf_size);
+    }
     public ImmutableArrayList() {
-        this.arr = new Object[0];
-        this.size = 0;
-        this.buf_size = 0;
+        this.Init(0);
     }
     public ImmutableArrayList(Object[] els) {
         this.arr = els;
@@ -44,18 +44,7 @@ public final class ImmutableArrayList implements ImmutableList{
         return newArr;
     }
     public ImmutableArrayList add(int index, Object e) {
-        ImmutableArrayList newArr = createCopy(1);
-        if (size != 0) {
-            if (index >= size || index < 0) {
-                throw new IllegalArgumentException();
-            }
-            for (int i = size; i > index; i--) {
-                newArr.arr[i] = newArr.arr[i-1];
-            }
-        }
-        newArr.arr[index] = e;
-        newArr.size += 1;
-        return newArr;
+        return addAll(index, new Object[]{e});
     }
     public ImmutableArrayList addAll(Object[] c) {
         int n = c.length;
@@ -95,10 +84,8 @@ public final class ImmutableArrayList implements ImmutableList{
             throw new IllegalArgumentException();
         }
         ImmutableArrayList newArr = new ImmutableArrayList(size-1);
-        int j = 0;
-        while (j != index) {
-            newArr.arr[j] = arr[j];
-            j++;
+        for (int i = 0; i < index; i++) {
+            newArr.arr[i] = arr[i];
         }
         for (int i = index; i < size-1; i++) {
             newArr.arr[i] = arr[i+1];
@@ -107,10 +94,10 @@ public final class ImmutableArrayList implements ImmutableList{
         return newArr;
     }
     public ImmutableArrayList set(int index, Object e) {
-        ImmutableArrayList newArr = createCopy();
         if (index >= size || index < 0) {
             throw new IllegalArgumentException();
         }
+        ImmutableArrayList newArr = createCopy();
         newArr.arr[index] = e;
         return newArr;
     }

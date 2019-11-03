@@ -24,63 +24,43 @@ public class ImmutableLinkedListTest {
 
     @Test
     public void testImmutableLinkedListWithEls() {
-        assertEquals("1", newLinkedList2.getHead().node);
-        assertEquals("3", newLinkedList2.getTail().node);
+        assertEquals("1", newLinkedList2.getHead().value);
+        assertEquals("3", newLinkedList2.getTail().value);
         assertEquals(3, newLinkedList2.getSize());
     }
 
+    private void compareArrayWithList(String[] arr, ImmutableLinkedList lst){
+        ImmutableLinkedList newList = new ImmutableLinkedList(arr);
+        assertEquals(newList.toString(), lst.toString());
+        assertEquals(arr.length, lst.getSize());
+        if(arr.length == 0){
+            assertNull(lst.getTail());
+            assertNull(lst.getHead());
+        }else{
+            assertEquals(arr[arr.length - 1], lst.getTail().value);
+            assertEquals(arr[0], lst.getHead().value);
+        }
+    }
     @Test
-    public void testAddatLastPosition() {
-        String[] newIntLst1 = {"1", "2", "3", "4"};
-        ImmutableLinkedList newLList1 = new ImmutableLinkedList(newIntLst1);
-        ImmutableLinkedList newImLL = newLinkedList2.add("4");
-        assertEquals(newLList1.toString(), newImLL.toString());
-
-        String[] newIntLst2 = {"1"};
-        ImmutableLinkedList newLList2 = new ImmutableLinkedList(newIntLst2);
-        ImmutableLinkedList newImLL2 = newLinkedList1.add("1");
-        assertEquals(newLList2.toString(), newImLL2.toString());
-
-        String[] newIntLst3 = {"1", "2", "3", "4"};
-        ImmutableLinkedList newLList3 = new ImmutableLinkedList(newIntLst3);
-        ImmutableLinkedList newImLL3 = newLinkedList2.addLast("4");
-        assertEquals(newLList3.toString(), newImLL3.toString());
-
-        String[] newIntLst4 = {"1"};
-        ImmutableLinkedList newLList4 = new ImmutableLinkedList(newIntLst4);
-        ImmutableLinkedList newImLL4 = newLinkedList1.addLast("1");
-        assertEquals(newLList4.toString(), newImLL4.toString());
+    public void testAddAtLastPosition() {
+        this.compareArrayWithList( new String[]{"1", "2", "3", "4"}, newLinkedList2.add("4"));
+        this.compareArrayWithList( new String[]{"1"}, newLinkedList1.add("1"));
+        this.compareArrayWithList( new String[]{"1", "2", "3", "4"}, newLinkedList2.addLast("4"));
+        this.compareArrayWithList( new String[]{"1"}, newLinkedList1.addLast("1"));
+        this.compareArrayWithList( new String[]{}, newLinkedList1.addLast("1").removeFirst());
     }
 
     @Test
     public void testAddatFirstPosition() {
-        String[] newIntLst1 = {"0", "1", "2", "3"};
-        ImmutableLinkedList newLList1 = new ImmutableLinkedList(newIntLst1);
-        ImmutableLinkedList newImLL = newLinkedList2.add(0, "0");
-        assertEquals(newLList1.toString(), newImLL.toString());
-
-        String[] newIntLst2 = {"1"};
-        ImmutableLinkedList newLList2 = new ImmutableLinkedList(newIntLst2);
-        ImmutableLinkedList newImLL2 = newLinkedList1.add(0, "1");
-        assertEquals(newLList2.toString(), newImLL2.toString());
-
-        String[] newIntLst3 = {"0", "1", "2", "3"};
-        ImmutableLinkedList newLList3 = new ImmutableLinkedList(newIntLst3);
-        ImmutableLinkedList newImLL3 = newLinkedList2.addFirst("0");
-        assertEquals(newLList3.toString(), newImLL3.toString());
-
-        String[] newIntLst4 = {"1"};
-        ImmutableLinkedList newLList4 = new ImmutableLinkedList(newIntLst4);
-        ImmutableLinkedList newImLL4 = newLinkedList1.addFirst("1");
-        assertEquals(newLList4.toString(), newImLL4.toString());
+        this.compareArrayWithList( new String[]{"0", "1", "2", "3"}, newLinkedList2.add(0, "0"));
+        this.compareArrayWithList( new String[]{"1"}, newLinkedList1.add(0, "1"));
+        this.compareArrayWithList( new String[]{"0", "1", "2", "3"}, newLinkedList2.addFirst("0"));
+        this.compareArrayWithList( new String[]{"1"}, newLinkedList1.addFirst("1"));
     }
 
     @Test
     public void testAddatAnyPosition() {
-        String[] newIntLst1 = {"1", "2", "2.1", "3"};
-        ImmutableLinkedList newLList1 = new ImmutableLinkedList(newIntLst1);
-        ImmutableLinkedList newImLL = newLinkedList2.add(2, "2.1");
-        assertEquals(newLList1.toString(), newImLL.toString());
+        this.compareArrayWithList( new String[]{"1", "2", "2.1", "3"}, newLinkedList2.add(2,"2.1"));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -96,35 +76,18 @@ public class ImmutableLinkedListTest {
     @Test
     public void testAddAllatAnyPosition() {
         String[] toAdd = {"a", "b", "c"};
-        String[] newatFirstPos = {"a", "b", "c", "1", "2", "3"};
-        ImmutableLinkedList ILLatFirstPos = new ImmutableLinkedList(newatFirstPos);
-
-        String[] newatLastPos = {"1", "2", "3", "a", "b", "c"};
-        ImmutableLinkedList ILLnewatLastPos = new ImmutableLinkedList(newatLastPos);
-
-        String[] newatPreLastPos = {"1", "2", "a", "b", "c", "3"};
-        ImmutableLinkedList ILLnewatPreLastPos = new ImmutableLinkedList(newatPreLastPos);
-
-        String[] newatAnyPos = {"1", "a", "b", "c", "2", "3"};
-        ImmutableLinkedList ILLatAnyPos = new ImmutableLinkedList(newatAnyPos);
-
-        String[] newEmptyadd = {"a", "b", "c"};
-        ImmutableLinkedList ILLnewEmptyadd = new ImmutableLinkedList(newEmptyadd);
-
-        ImmutableLinkedList newImLLFirstPos = newLinkedList2.addAll(0, toAdd);
-        ImmutableLinkedList newImLLLastPos = newLinkedList2.addAll(2, toAdd);
-        ImmutableLinkedList newImLLAnyPos = newLinkedList2.addAll(1, toAdd);
-        ImmutableLinkedList newImLLEmptyadd = newLinkedList1.addAll(0, toAdd);
-        ImmutableLinkedList newImLLLastPosWithoutIndex = newLinkedList2.addAll(toAdd);
-        ImmutableLinkedList newImLLLastPosWithoutIndexEmpty = newLinkedList1.addAll(toAdd);
-
-
-        assertEquals(ILLatFirstPos.toString(), newImLLFirstPos.toString());
-        assertEquals(ILLnewatPreLastPos.toString(), newImLLLastPos.toString());
-        assertEquals(ILLatAnyPos.toString(), newImLLAnyPos.toString());
-        assertEquals(ILLnewEmptyadd.toString(), newImLLEmptyadd.toString());
-        assertEquals(ILLnewatLastPos.toString(), newImLLLastPosWithoutIndex.toString());
-        assertEquals("a, b, c", newImLLLastPosWithoutIndexEmpty.toString());
+        this.compareArrayWithList( new String[]{"a", "b", "c", "1", "2", "3"},
+                newLinkedList2.addAll(0, toAdd));
+        this.compareArrayWithList( new String[]{"1", "2", "3", "a", "b", "c"},
+                newLinkedList2.addAll(toAdd));
+        this.compareArrayWithList( new String[]{"1", "2", "a", "b", "c", "3"},
+                newLinkedList2.addAll(2, toAdd));
+        this.compareArrayWithList( new String[]{"1", "a", "b", "c", "2", "3"},
+                newLinkedList2.addAll(1, toAdd));
+        this.compareArrayWithList( new String[]{"a", "b", "c"},
+                newLinkedList1.addAll(0, toAdd));
+        this.compareArrayWithList( new String[]{"a", "b", "c"},
+                newLinkedList1.addAll(toAdd));
     }
     @Test(expected = IllegalArgumentException.class)
     public void testAddAllInvalidIndextooBig() {
@@ -138,18 +101,14 @@ public class ImmutableLinkedListTest {
 
     @Test
     public void testRemove() {
-        String[] newatFirstPos = {"2", "3"};
-        ImmutableLinkedList ILLatFirstPos = new ImmutableLinkedList(newatFirstPos);
-        String[] newatAnyPos = {"1", "3"};
-        ImmutableLinkedList ILLatAnyPos = new ImmutableLinkedList(newatAnyPos);
-        String[] newatLastPos = {"1", "2"};
-        ImmutableLinkedList ILLatLastPos = new ImmutableLinkedList(newatLastPos);
-
-        assertEquals(ILLatFirstPos.toString(), newLinkedList2.remove(0).toString());
-        assertEquals(ILLatAnyPos.toString(), newLinkedList2.remove(1).toString());
-        assertEquals(ILLatFirstPos.toString(), newLinkedList2.removeFirst().toString());
-        assertEquals(ILLatLastPos.toString(), newLinkedList2.removeLast().toString());
-
+        this.compareArrayWithList( new String[]{"2", "3"},
+                newLinkedList2.remove(0));
+        this.compareArrayWithList( new String[]{"2", "3"},
+                newLinkedList2.removeFirst());
+        this.compareArrayWithList( new String[]{"1", "3"},
+                newLinkedList2.remove(1));
+        this.compareArrayWithList( new String[]{"1", "2"},
+                newLinkedList2.removeLast());
     }
     @Test(expected = IllegalArgumentException.class)
     public void testRemoveInvalidIndex() {
@@ -162,14 +121,11 @@ public class ImmutableLinkedListTest {
 
     @Test
     public void testSet() {
-        String[] newatFirstPos = {"s", "2", "3"};
-        ImmutableLinkedList ILLatFirstPos = new ImmutableLinkedList(newatFirstPos);
-        String[] newatAnyPos = {"1", "s", "3"};
-        ImmutableLinkedList ILLatAnyPos = new ImmutableLinkedList(newatAnyPos);
-
-        assertEquals(ILLatFirstPos.toString(), newLinkedList2.set(0, "s").toString());
-        assertEquals(ILLatAnyPos.toString(), newLinkedList2.set(1, "s").toString());
-    }
+        this.compareArrayWithList( new String[]{"s", "2", "3"},
+                newLinkedList2.set(0, "s"));
+        this.compareArrayWithList( new String[]{"1", "s", "3"},
+                newLinkedList2.set(1, "s"));
+       }
     @Test(expected = IllegalArgumentException.class)
     public void testSetInvalidIndex() {
         newLinkedList2.set(6, "s");
