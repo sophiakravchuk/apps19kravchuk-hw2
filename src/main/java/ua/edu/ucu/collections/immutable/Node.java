@@ -10,3 +10,4 @@ class Node {
         this.next = null;
     }
 }
+

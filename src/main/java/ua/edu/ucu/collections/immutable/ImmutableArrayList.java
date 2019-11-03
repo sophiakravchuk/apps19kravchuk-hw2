@@ -5,22 +5,12 @@ public final class ImmutableArrayList implements ImmutableList {
     private int bufSize;
     private Object[] arr;
 
-    public int getBufSize() {
-        return bufSize;
-    }
-
-    private void Init(int bufSize) {
-        this.size = 0;
-        this.arr = new Object[bufSize];
-        this.bufSize = bufSize;
-    }
-
     public ImmutableArrayList() {
-        this.Init(0);
+        this.init(0);
     }
 
     public ImmutableArrayList(int bufSize) {
-        this.Init(bufSize);
+        this.init(bufSize);
     }
 
     public ImmutableArrayList(Object[] els) {
@@ -29,9 +19,15 @@ public final class ImmutableArrayList implements ImmutableList {
         this.bufSize = els.length;
     }
 
+    public int getBufSize() {
+        return bufSize;
+    }
 
-
-
+    private void init(int bufSize) {
+        this.size = 0;
+        this.arr = new Object[bufSize];
+        this.bufSize = bufSize;
+    }
 
     private ImmutableArrayList createCopy(int addBufferSize) {
         ImmutableArrayList newArr =
@@ -158,3 +154,4 @@ public final class ImmutableArrayList implements ImmutableList {
         return sb.toString();
     }
 }
+

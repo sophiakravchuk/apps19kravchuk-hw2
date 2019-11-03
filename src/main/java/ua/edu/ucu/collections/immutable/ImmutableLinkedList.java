@@ -6,19 +6,6 @@ public final class ImmutableLinkedList implements ImmutableList {
     private Node head;
     private Node tail;
     private int size;
-
-    public Node getHead() {
-        return head;
-    }
-
-    public Node getTail() {
-        return tail;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
     public ImmutableLinkedList() {
         this.head = null;
         this.tail = null;
@@ -43,6 +30,18 @@ public final class ImmutableLinkedList implements ImmutableList {
             this.size = els.length;
             this.tail = local;
         }
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public Node getTail() {
+        return tail;
+    }
+
+    public int getSize() {
+        return size;
     }
 
     private ImmutableLinkedList createCopy() {
@@ -102,7 +101,9 @@ public final class ImmutableLinkedList implements ImmutableList {
         if (index == 0) {
             cImmLinkedList.tail.next = newImmLinkedList.head;
             newImmLinkedList.head = cImmLinkedList.head;
-            if (size == 0) {newImmLinkedList.tail = cImmLinkedList.tail;}
+            if (size == 0) {
+                newImmLinkedList.tail = cImmLinkedList.tail;
+            }
         } else {
             if (index > size) {
                 throw new IllegalArgumentException();
@@ -110,7 +111,9 @@ public final class ImmutableLinkedList implements ImmutableList {
             previousElement = newImmLinkedList.getElementByIndex(index - 1);
             cImmLinkedList.tail.next = previousElement.next;
             previousElement.next = cImmLinkedList.head;
-            if (index == size) {newImmLinkedList.tail = cImmLinkedList.tail;}
+            if (index == size) {
+                newImmLinkedList.tail = cImmLinkedList.tail;
+            }
         }
         newImmLinkedList.size += cImmLinkedList.size;
         return newImmLinkedList;
@@ -235,3 +238,4 @@ public final class ImmutableLinkedList implements ImmutableList {
         return remove(size - 1);
     }
 }
+
