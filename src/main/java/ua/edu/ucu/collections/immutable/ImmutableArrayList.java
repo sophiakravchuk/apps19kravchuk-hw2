@@ -2,40 +2,45 @@ package ua.edu.ucu.collections.immutable;
 
 public final class ImmutableArrayList implements ImmutableList {
     private int size;
-    private int buf_size;
+    private int bufSize;
     private Object[] arr;
 
     public int getBufSize() {
-        return buf_size;
+        return bufSize;
     }
 
-    private void Init(int buf_size) {
+    private void Init(int bufSize) {
         this.size = 0;
-        this.arr = new Object[buf_size];
-        this.buf_size = buf_size;
-    }
-
-    public ImmutableArrayList(int buf_size) {
-        this.Init(buf_size);
+        this.arr = new Object[bufSize];
+        this.bufSize = bufSize;
     }
 
     public ImmutableArrayList() {
         this.Init(0);
     }
 
+    public ImmutableArrayList(int bufSize) {
+        this.Init(bufSize);
+    }
+
     public ImmutableArrayList(Object[] els) {
         this.arr = els;
         this.size = els.length;
-        this.buf_size = els.length;
+        this.bufSize = els.length;
     }
 
+
+
+
+
     private ImmutableArrayList createCopy(int addBufferSize) {
-        ImmutableArrayList newArr = new ImmutableArrayList(size + addBufferSize);
+        ImmutableArrayList newArr =
+                new ImmutableArrayList(size + addBufferSize);
 
         for (int i = 0; i < size; i++) {
             newArr.arr[i] = this.arr[i];
         }
-        newArr.buf_size = this.size + addBufferSize;
+        newArr.bufSize = this.size + addBufferSize;
         newArr.size = this.size;
         return newArr;
     }

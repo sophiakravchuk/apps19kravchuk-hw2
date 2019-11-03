@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec7fa5ee-6215-4758-b5dd-cc7729387020" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="172" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1T4lYeGzpuIYuKBTMbwvIXpQHVr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ImmutableLinkedListTest">
+    <configuration name="ImmutableLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImmutableCollections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.collections.immutable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.collections.immutable" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.immutable.ImmutableLinkedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImmutableLinkedListTest.testAddAllatAnyPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImmutableCollections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.collections.immutable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.collections.immutable" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.immutable.ImmutableLinkedListTest" />
+      <option name="METHOD_NAME" value="testAddAllatAnyPosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImmutableLinkedListTest.testAddatAnyPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImmutableCollections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.collections.immutable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.collections.immutable" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.immutable.ImmutableLinkedListTest" />
+      <option name="METHOD_NAME" value="testAddatAnyPosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImmutableLinkedListTest.testAddatFirstPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImmutableCollections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.collections.immutable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.collections.immutable" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.immutable.ImmutableLinkedListTest" />
+      <option name="METHOD_NAME" value="testAddatFirstPosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImmutableLinkedListTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImmutableCollections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.collections.immutable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.collections.immutable" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.immutable.ImmutableLinkedListTest" />
+      <option name="METHOD_NAME" value="testRemove" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ImmutableLinkedListTest" />
+        <item itemvalue="JUnit.ImmutableLinkedListTest.testRemove" />
+        <item itemvalue="JUnit.ImmutableLinkedListTest.testAddAllatAnyPosition" />
+        <item itemvalue="JUnit.ImmutableLinkedListTest.testAddatAnyPosition" />
+        <item itemvalue="JUnit.ImmutableLinkedListTest.testAddatFirstPosition" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec7fa5ee-6215-4758-b5dd-cc7729387020" name="Default Changelist" comment="" />
+      <created>1572727297809</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572727297809</updated>
+      <workItem from="1572727300841" duration="37219000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testindexOf.ic" NAME="ImmutableLinkedListTest.testindexOf Coverage Results" MODIFIED="1572736283975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testAddAtLastPosition.ic" NAME="ImmutableLinkedListTest.testAddAtLastPosition Coverage Results" MODIFIED="1572798889512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testAddatLastPosition.ic" NAME="ImmutableArrayListTest.testAddatLastPosition Coverage Results" MODIFIED="1572781937071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testAddatFirstPosition.ic" NAME="ImmutableArrayListTest.testAddatFirstPosition Coverage Results" MODIFIED="1572782614556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testGetInvalidIndextooBig.ic" NAME="ImmutableArrayListTest.testGetInvalidIndextooBig Coverage Results" MODIFIED="1572786683165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testAddAllInvalidIndextooBig.ic" NAME="ImmutableLinkedListTest.testAddAllInvalidIndextooBig Coverage Results" MODIFIED="1572735477309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testRemove.ic" NAME="ImmutableLinkedListTest.testRemove Coverage Results" MODIFIED="1572737669354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testToArray.ic" NAME="ImmutableLinkedListTest.testToArray Coverage Results" MODIFIED="1572737005974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testIsEmpty.ic" NAME="ImmutableArrayListTest.testIsEmpty Coverage Results" MODIFIED="1572788793237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testSet.ic" NAME="ImmutableArrayListTest.testSet Coverage Results" MODIFIED="1572788169033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$StackTest.ic" NAME="StackTest Coverage Results" MODIFIED="1572797922199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testAddAllatAnyPosition.ic" NAME="ImmutableLinkedListTest.testAddAllatAnyPosition Coverage Results" MODIFIED="1572735327854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testAddatAnyPosition.ic" NAME="ImmutableArrayListTest.testAddatAnyPosition Coverage Results" MODIFIED="1572783025106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testAddInvalidIndexNegative.ic" NAME="ImmutableLinkedListTest.testAddInvalidIndexNegative Coverage Results" MODIFIED="1572732296854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testImmutableArrayListEmpty.ic" NAME="ImmutableArrayListTest.testImmutableArrayListEmpty Coverage Results" MODIFIED="1572781055556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$QueueTest_testDequeue.ic" NAME="QueueTest.testDequeue Coverage Results" MODIFIED="1572791379147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest.ic" NAME="ImmutableLinkedListTest Coverage Results" MODIFIED="1572797896746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testSet.ic" NAME="ImmutableLinkedListTest.testSet Coverage Results" MODIFIED="1572736196087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$QueueTest.ic" NAME="QueueTest Coverage Results" MODIFIED="1572797915991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testClear.ic" NAME="ImmutableLinkedListTest.testClear Coverage Results" MODIFIED="1572736645201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testGetFirst.ic" NAME="ImmutableLinkedListTest.testGetFirst Coverage Results" MODIFIED="1572737476924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testClear.ic" NAME="ImmutableArrayListTest.testClear Coverage Results" MODIFIED="1572788774518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testGetLast.ic" NAME="ImmutableLinkedListTest.testGetLast Coverage Results" MODIFIED="1572737516691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testAddAllInvalidIndextooBig.ic" NAME="ImmutableArrayListTest.testAddAllInvalidIndextooBig Coverage Results" MODIFIED="1572786593921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testIsEmpty.ic" NAME="ImmutableLinkedListTest.testIsEmpty Coverage Results" MODIFIED="1572736764183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testindexOf.ic" NAME="ImmutableArrayListTest.testindexOf Coverage Results" MODIFIED="1572788210587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testAddInvalidIndextooBig.ic" NAME="ImmutableArrayListTest.testAddInvalidIndextooBig Coverage Results" MODIFIED="1572783055856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testRemove.ic" NAME="ImmutableArrayListTest.testRemove Coverage Results" MODIFIED="1572787413535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$QueueTest_enqueue.ic" NAME="QueueTest.enqueue Coverage Results" MODIFIED="1572791405922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testGet.ic" NAME="ImmutableLinkedListTest.testGet Coverage Results" MODIFIED="1572735633350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testSetInvalidIndex.ic" NAME="ImmutableLinkedListTest.testSetInvalidIndex Coverage Results" MODIFIED="1572736139577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testToSyring.ic" NAME="ImmutableArrayListTest.testToSyring Coverage Results" MODIFIED="1572788871693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testAddInvalidIndexNegative.ic" NAME="ImmutableArrayListTest.testAddInvalidIndexNegative Coverage Results" MODIFIED="1572783072976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testAddAllatAnyPosition.ic" NAME="ImmutableArrayListTest.testAddAllatAnyPosition Coverage Results" MODIFIED="1572786558700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testRemoveInvalidIndex.ic" NAME="ImmutableLinkedListTest.testRemoveInvalidIndex Coverage Results" MODIFIED="1572735977037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testSetInvalidIndex.ic" NAME="ImmutableArrayListTest.testSetInvalidIndex Coverage Results" MODIFIED="1572788188333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$QueueTest_testEnqueue.ic" NAME="QueueTest.testEnqueue Coverage Results" MODIFIED="1572791489400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testImmutableArrayListWithEls.ic" NAME="ImmutableArrayListTest.testImmutableArrayListWithEls Coverage Results" MODIFIED="1572781217091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableLinkedListTest_testSize.ic" NAME="ImmutableLinkedListTest.testSize Coverage Results" MODIFIED="1572736338804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testGet.ic" NAME="ImmutableArrayListTest.testGet Coverage Results" MODIFIED="1572786678629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest_testSize.ic" NAME="ImmutableArrayListTest.testSize Coverage Results" MODIFIED="1572788333572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ImmutableCollections$ImmutableArrayListTest.ic" NAME="ImmutableArrayListTest Coverage Results" MODIFIED="1572797881532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ua.edu.ucu.collections.immutable.*</FILTER>
+    </SUITE>
+  </component>
+</project>

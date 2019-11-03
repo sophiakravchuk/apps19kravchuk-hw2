@@ -1,14 +1,5 @@
 package ua.edu.ucu.collections.immutable;
 
-class Node {
-    Node next;
-    Object value;
-
-    Node(Object e) {
-        this.value = e;
-        this.next = null;
-    }
-}
 
 
 public final class ImmutableLinkedList implements ImmutableList {
@@ -73,16 +64,17 @@ public final class ImmutableLinkedList implements ImmutableList {
     }
 
     private Node getElementByIndex(int index) {
+        int indL = index;
         if (index < 0) {
             throw new IllegalArgumentException();
         }
         Node elementByInd = this.head;
-        while (index > 0) {
+        while (indL > 0) {
             elementByInd = elementByInd.next;
             if (elementByInd == null) {
                 throw new IllegalArgumentException();
             }
-            index--;
+            indL--;
 
         }
         return elementByInd;
@@ -110,7 +102,7 @@ public final class ImmutableLinkedList implements ImmutableList {
         if (index == 0) {
             cImmLinkedList.tail.next = newImmLinkedList.head;
             newImmLinkedList.head = cImmLinkedList.head;
-            if (size == 0) newImmLinkedList.tail = cImmLinkedList.tail;
+            if (size == 0) {newImmLinkedList.tail = cImmLinkedList.tail;}
         } else {
             if (index > size) {
                 throw new IllegalArgumentException();
@@ -118,7 +110,7 @@ public final class ImmutableLinkedList implements ImmutableList {
             previousElement = newImmLinkedList.getElementByIndex(index - 1);
             cImmLinkedList.tail.next = previousElement.next;
             previousElement.next = cImmLinkedList.head;
-            if (index == size) newImmLinkedList.tail = cImmLinkedList.tail;
+            if (index == size) {newImmLinkedList.tail = cImmLinkedList.tail;}
         }
         newImmLinkedList.size += cImmLinkedList.size;
         return newImmLinkedList;
