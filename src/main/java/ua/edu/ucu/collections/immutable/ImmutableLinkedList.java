@@ -66,9 +66,6 @@ public final class ImmutableLinkedList implements ImmutableList {
     private Node getElementByIndex(int index) {
         int indL = index;
         checkIndexForAdd(index);
-//        if (index < 0) {
-//            throw new IndexOutOfBoundsException();
-//        }
         Node elementByInd = this.head;
         while (indL > 0) {
             elementByInd = elementByInd.next;
@@ -95,9 +92,6 @@ public final class ImmutableLinkedList implements ImmutableList {
 
     public ImmutableLinkedList addAll(int index, Object[] c) {
         checkIndexForAdd(index);
-//        if (index > size) {
-//            throw new IndexOutOfBoundsException();
-//        }
         ImmutableLinkedList newImmLinkedList = createCopy();
         ImmutableLinkedList cImmLinkedList = new ImmutableLinkedList(c);
         Node previousElement;
