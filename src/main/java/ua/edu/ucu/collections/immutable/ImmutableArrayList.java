@@ -46,10 +46,7 @@ public final class ImmutableArrayList implements ImmutableList {
     }
 
     public ImmutableArrayList add(Object e) {
-        ImmutableArrayList newArr = createCopy(1);
-        newArr.arr[newArr.size] = e;
-        newArr.size += 1;
-        return newArr;
+        return addAll(size, new Object[]{e});
     }
 
     public ImmutableArrayList add(int index, Object e) {
@@ -57,22 +54,17 @@ public final class ImmutableArrayList implements ImmutableList {
     }
 
     public ImmutableArrayList addAll(Object[] c) {
-        int n = c.length;
-        ImmutableArrayList newArr = createCopy(n);
-        for (int i = 0; i < n; i++) {
-            newArr.arr[this.size + i] = c[i];
-        }
-        newArr.size += n;
-        return newArr;
+        return addAll(size, c);
     }
 
     public ImmutableArrayList addAll(int index, Object[] c) {
         int n = c.length;
         ImmutableArrayList newArr = createCopy(n);
         if (size != 0) {
-            if (index >= size || index < 0) {
-                throw new IllegalArgumentException();
-            }
+            checkIndexForAdd(index);
+//            if (index > size || index < 0) {
+//                throw new IndexOutOfBoundsException();
+//            }
             for (int i = size - 1; i >= index; i--) {
                 newArr.arr[i + n] = newArr.arr[i];
             }
@@ -85,16 +77,24 @@ public final class ImmutableArrayList implements ImmutableList {
     }
 
     public Object get(int index) {
-        if (index >= size || index < 0) {
-            throw new IllegalArgumentException();
+        checkIndexForAdd(index);
+        if (index == size) {
+            throw new IndexOutOfBoundsException();
         }
+//        if (index >= size || index < 0) {
+//            throw new IndexOutOfBoundsException();
+//        }
         return arr[index];
     }
 
     public ImmutableArrayList remove(int index) {
-        if (index >= size || index < 0) {
-            throw new IllegalArgumentException();
+        checkIndexForAdd(index);
+        if (index == size) {
+            throw new IndexOutOfBoundsException();
         }
+//        if (index >= size || index < 0) {
+//            throw new IndexOutOfBoundsException();
+//        }
         ImmutableArrayList newArr = new ImmutableArrayList(size - 1);
         for (int i = 0; i < index; i++) {
             newArr.arr[i] = arr[i];
@@ -107,9 +107,13 @@ public final class ImmutableArrayList implements ImmutableList {
     }
 
     public ImmutableArrayList set(int index, Object e) {
-        if (index >= size || index < 0) {
-            throw new IllegalArgumentException();
+        checkIndexForAdd(index);
+        if (index == size) {
+            throw new IndexOutOfBoundsException();
         }
+//        if (index >= size || index < 0) {
+//            throw new IndexOutOfBoundsException();
+//        }
         ImmutableArrayList newArr = createCopy();
         newArr.arr[index] = e;
         return newArr;
@@ -117,7 +121,7 @@ public final class ImmutableArrayList implements ImmutableList {
 
     public int indexOf(Object e) {
         for (int i = 0; i < size; i++) {
-            if (arr[i] == e) {
+            if (arr[i].equals(e)) {
                 return i;
             }
         }
@@ -153,5 +157,24 @@ public final class ImmutableArrayList implements ImmutableList {
         }
         return sb.toString();
     }
+
+    private boolean equals(ImmutableArrayList lst) {
+        if (this.size != lst.size) {
+            return false;
+        }
+        for (int i = 0; i < size; i++) {
+            if (!lst.arr[i].equals(this.arr[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void checkIndexForAdd(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
 }
 

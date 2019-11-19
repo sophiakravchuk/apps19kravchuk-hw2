@@ -64,12 +64,12 @@ public class ImmutableLinkedListTest {
         this.compareArrayWithList(new String[]{"1", "2", "2.1", "3"}, newLinkedList2.add(2, "2.1"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testAddInvalidIndextooBig() {
         ImmutableLinkedList newImLL = newLinkedList2.add(5, "2");
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testAddInvalidIndexNegative() {
         ImmutableLinkedList newImLL1 = newLinkedList2.add(-5, "2");
     }
@@ -91,7 +91,7 @@ public class ImmutableLinkedListTest {
                 newLinkedList1.addAll(toAdd));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAllInvalidIndextooBig() {
         String[] toAdd = {"a", "b", "c"};
         ImmutableLinkedList newImLL = newLinkedList2.addAll(5, toAdd);
@@ -114,12 +114,12 @@ public class ImmutableLinkedListTest {
                 newLinkedList2.removeLast());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveInvalidIndex() {
         newLinkedList2.remove(6);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveInvalidIndex2() {
         newLinkedList1.remove(6);
     }
@@ -132,7 +132,7 @@ public class ImmutableLinkedListTest {
                 newLinkedList2.set(1, "s"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testSetInvalidIndex() {
         newLinkedList2.set(6, "s");
     }

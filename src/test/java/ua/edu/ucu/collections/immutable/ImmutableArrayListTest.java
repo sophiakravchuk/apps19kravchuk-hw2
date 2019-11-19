@@ -78,12 +78,12 @@ public class ImmutableArrayListTest {
         assertArrayEquals(newIntLst2, newAL2.toArray());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testAddInvalidIndextooBig() {
         newArrayList2.add(5, "2");
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testAddInvalidIndexNegative() {
         newArrayList2.add(-5, "2");
     }
@@ -107,7 +107,7 @@ public class ImmutableArrayListTest {
         assertArrayEquals(newatAnyPos3, newALAny3.toArray());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testAddAllInvalidIndextooBig() {
         String[] toAdd = {"a", "b", "c"};
         newArrayList2.addAll(5, toAdd);
@@ -118,7 +118,7 @@ public class ImmutableArrayListTest {
         assertEquals("1", newArrayList2.get(0));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testGetInvalidIndextooBig() {
         Object a = newArrayList2.get(5);
     }
@@ -136,12 +136,12 @@ public class ImmutableArrayListTest {
 
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveInvalidIndex() {
         newArrayList2.remove(6);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveInvalidIndex2() {
         newArrayList2.remove(-6);
     }
@@ -155,7 +155,7 @@ public class ImmutableArrayListTest {
         assertArrayEquals(newatAnyPos, newArrayList2.set(1, "s").toArray());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testSetInvalidIndex() {
         newArrayList2.set(6, "s");
     }

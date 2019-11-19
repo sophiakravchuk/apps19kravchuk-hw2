@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec7fa5ee-6215-4758-b5dd-cc7729387020" name="Default Changelist" comment="" />
+    <list default="true" id="ec7fa5ee-6215-4758-b5dd-cc7729387020" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../target/classes/ua/edu/ucu/collections/immutable/ImmutableArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/ua/edu/ucu/collections/immutable/ImmutableArrayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/ua/edu/ucu/collections/immutable/ImmutableLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/ua/edu/ucu/collections/immutable/ImmutableLinkedList.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572727297809</updated>
       <workItem from="1572727300841" duration="37219000" />
+      <workItem from="1574188610912" duration="56000" />
     </task>
     <servers />
   </component>
@@ -146,7 +150,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
