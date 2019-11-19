@@ -16,7 +16,7 @@ public class Dispatcher {
         System.out.println("Congratulation! You make good work");
     }
 
-    public static void functionalityTest(ImmutableList testList){
+    public static void functionalityTest(ImmutableList testList) {
         typeTesting();
         ImmutableList a = testList;
         a = a.add(1);
@@ -55,14 +55,14 @@ public class Dispatcher {
 
 
         System.out.println(b);
-        sameResult(b.indexOf(1),0);
+        sameResult(b.indexOf(1), 0);
         // test on  == vs equals usage in function indexOf
-        sameResult(b.indexOf(new Integer(1)),0); // = )
+        sameResult(b.indexOf(new Integer(1)), 0); // = )
 
 
         b = b.clear();
 //        System.out.println(b);
-        sameResult(b,new Object[]{});
+        sameResult(b, new Object[]{});
     }
 
     public static void sameResult(ImmutableList result, Object[] target) {
@@ -76,12 +76,12 @@ public class Dispatcher {
     }
 
     public static void sameResult(int result, int target) {
-        if(result != target){
+        if (result != target) {
             throw new AssertionError();
         }
     }
 
-    public static void typeTesting(){
+    public static void typeTesting() {
         // you should not have Errors here...
 
         ImmutableLinkedList l1 = new ImmutableLinkedList();
@@ -92,4 +92,5 @@ public class Dispatcher {
     }
 
 }
+
 

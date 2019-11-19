@@ -158,7 +158,7 @@ public final class ImmutableArrayList implements ImmutableList {
         return sb.toString();
     }
 
-    private boolean equals(ImmutableArrayList lst) {
+    public boolean equals(ImmutableArrayList lst) {
         if (this.size != lst.size) {
             return false;
         }
@@ -175,6 +175,4 @@ public final class ImmutableArrayList implements ImmutableList {
             throw new IndexOutOfBoundsException();
         }
     }
-
 }
-

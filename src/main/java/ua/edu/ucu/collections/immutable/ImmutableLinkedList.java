@@ -6,6 +6,7 @@ public final class ImmutableLinkedList implements ImmutableList {
     private Node head;
     private Node tail;
     private int size;
+
     public ImmutableLinkedList() {
         this.head = null;
         this.tail = null;
@@ -240,7 +241,7 @@ public final class ImmutableLinkedList implements ImmutableList {
         return remove(size - 1);
     }
 
-    private boolean equals(ImmutableLinkedList lst) {
+    public boolean equals(ImmutableLinkedList lst) {
         if (this.size != lst.size) {
             return false;
         }
@@ -261,7 +262,4 @@ public final class ImmutableLinkedList implements ImmutableList {
             throw new IndexOutOfBoundsException();
         }
     }
-
-
 }
-
